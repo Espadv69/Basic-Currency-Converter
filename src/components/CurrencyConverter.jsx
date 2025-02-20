@@ -34,6 +34,22 @@ const CurrencyConverter = () => {
           </option>
         ))}
       </select>
+      <span>to</span>
+      <select
+        value={toCurrency}
+        onChange={(e) => setToCurrency(e.target.value)}
+      >
+        {Object.keys(exchangeRates).map((currency) => (
+          <option key={currency} value={currency}>
+            {currency}
+          </option>
+        ))}
+      </select>
+
+      <button onClick={convertCurrency}>Convert</button>
+      <h3>
+        Converted Amount: {convertedAmount.toFixed(2)} {toCurrency}
+      </h3>
     </div>
   )
 }
