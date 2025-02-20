@@ -22,6 +22,15 @@
   }
 }
 
+.form__currency {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+
+  display: flex;
+  align-content: center;
+  gap: 1rem;
+}
+
 .input__currency {
   padding: .5rem;
 
