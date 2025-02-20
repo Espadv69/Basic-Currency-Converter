@@ -45,13 +45,18 @@ const CurrencyConverter = () => {
         </select>
       </div>
 
-      <input
-        type="number"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-      />
+      <div className="form__currency">
+        <input
+          type="number"
+          className="input__currency"
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+        />
 
-      <button onClick={convertCurrency}>Convert</button>
+        <button className="button__currency" onClick={convertCurrency}>
+          Convert
+        </button>
+      </div>
       <h3>
         Converted Amount: {convertedAmount} {toCurrency}
       </h3>
