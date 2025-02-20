@@ -19,8 +19,8 @@ const CurrencyConverter = () => {
 
   return (
     <div>
-      <div className="currency">
         <h2>Currency Converter</h2>
+      <div className="currency">
         <select
           value={fromCurrency}
           onChange={(e) => setFromCurrency(e.target.value)}
