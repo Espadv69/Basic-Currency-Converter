@@ -7,4 +7,17 @@
 
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
+
+  select {
+    padding: .4rem;
+  
+    border: none;
+
+    color: white;
+    background: royalblue;
+
+    option {
+      color: currentColor;
+    }
+  }
 }
