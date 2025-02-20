@@ -19,33 +19,36 @@ const CurrencyConverter = () => {
 
   return (
     <div>
-      <h2>Currency Converter</h2>
+      <div className="currency">
+        <h2>Currency Converter</h2>
+        <select
+          value={fromCurrency}
+          onChange={(e) => setFromCurrency(e.target.value)}
+        >
+          {Object.keys(exchangeRates).map((currency) => (
+            <option key={currency} value={currency}>
+              {currency}
+            </option>
+          ))}
+        </select>
+        <span>to</span>
+        <select
+          value={toCurrency}
+          onChange={(e) => setToCurrency(e.target.value)}
+        >
+          {Object.keys(exchangeRates).map((currency) => (
+            <option key={currency} value={currency}>
+              {currency}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <input
         type="number"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
       />
-      <select
-        value={fromCurrency}
-        onChange={(e) => setFromCurrency(e.target.value)}
-      >
-        {Object.keys(exchangeRates).map((currency) => (
-          <option key={currency} value={currency}>
-            {currency}
-          </option>
-        ))}
-      </select>
-      <span>to</span>
-      <select
-        value={toCurrency}
-        onChange={(e) => setToCurrency(e.target.value)}
-      >
-        {Object.keys(exchangeRates).map((currency) => (
-          <option key={currency} value={currency}>
-            {currency}
-          </option>
-        ))}
-      </select>
 
       <button onClick={convertCurrency}>Convert</button>
       <h3>
