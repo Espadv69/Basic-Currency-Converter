@@ -15,6 +15,27 @@ const CurrencyConverter = () => {
       setConvertedAmount(amount * rate)
     }
   }
+
+  return (
+    <div>
+      <h2>Currency Converter</h2>
+      <input
+        type="number"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+      />
+      <select
+        value={fromCurrency}
+        onChange={(e) => setFromCurrency(e.target.value)}
+      >
+        {Object.keys(exchangeRates).map((currency) => (
+          <option key={currency} value={currency}>
+            {currency}
+          </option>
+        ))}
+      </select>
+    </div>
+  )
 }
 
 export default CurrencyConverter
