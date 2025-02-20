@@ -12,7 +12,8 @@ const CurrencyConverter = () => {
       setConvertedAmount(amount)
     } else {
       const rate = exchangeRates[fromCurrency][toCurrency] || 1
-      setConvertedAmount(amount * rate)
+      const convertedValue = amount * rate
+      setConvertedAmount(convertedValue.toFixed(2))
     }
   }
 
@@ -48,7 +49,7 @@ const CurrencyConverter = () => {
 
       <button onClick={convertCurrency}>Convert</button>
       <h3>
-        Converted Amount: {convertedAmount.toFixed(2)} {toCurrency}
+        Converted Amount: {convertedAmount} {toCurrency}
       </h3>
     </div>
   )
