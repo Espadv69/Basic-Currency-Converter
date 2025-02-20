@@ -21,7 +21,7 @@ const CurrencyConverter = () => {
 
   return (
     <div>
-        <h2>Currency Converter</h2>
+      <h2 className="h2__currency">Currency Converter</h2>
       <div className="currency">
         <select
           value={fromCurrency}
