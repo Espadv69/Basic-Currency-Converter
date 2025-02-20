@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { exchangeRates } from '../data/exchangeRates'
 
+import './CurrencyConverter.css'
+
 const CurrencyConverter = () => {
   const [amount, setAmount] = useState(1)
   const [fromCurrency, setFromCurrency] = useState('USD')
