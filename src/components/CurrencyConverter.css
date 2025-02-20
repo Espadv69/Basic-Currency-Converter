@@ -10,7 +10,7 @@
 
   select {
     padding: .4rem;
-  
+
     border: none;
 
     color: white;
@@ -20,4 +20,14 @@
       color: currentColor;
     }
   }
+}
+
+.input__currency {
+  padding: .5rem;
+
+  border: 0px;
+  border-bottom: 2px solid whitesmoke;
+
+  color: white;
+  background: transparent;
 }
